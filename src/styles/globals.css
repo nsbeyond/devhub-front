@@ -2,18 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+
 html,
 body {
-  padding: 0;
+  background-color: theme('colors.site-background.DEFAULT');
+  padding: 15px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Kanit', sans-serif !important;
+  font-size: 18px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
+
+.bs-box {
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35); 
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+  border-radius: 5px;
+}
+
+.bg-shadow {
+  background-color: theme('colors.white-lilac.DEFAULT');
+  margin-bottom: 10px;
+}
+
+.btn-default {
+  min-width: 120px;
+  font-family: 'Kanit', sans-serif !important;
+  font-weight: 900;
+  color: theme('colors.white-lilac.DEFAULT');
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgb(166,141,230);
+  background: linear-gradient(-180deg, rgb(125, 79, 253) 30%, rgba(147,107,255,1) 55%, rgba(129,91,238,1) 100%);
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+  border: 2px solid theme('colors.medium-purple.DEFAULT');
+}
+
+.btn-default:hover {
+  color: theme('colors.white-lilac.DEFAULT');
+  padding: 5px;
+  border-radius: 5px;
+  background: linear-gradient(-180deg, rgba(166,141,230,1) 0%, rgb(125, 79, 253) 35%, rgba(129,91,238,1) 50%);
+}
+
+.btn-success {
+  min-width: 120px;
+  font-family: 'Kanit', sans-serif !important;
+  font-weight: 900;
+  color: theme('colors.white-lilac.DEFAULT');
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background: rgb(141, 230, 151);
+  background: linear-gradient(-180deg, rgb(17, 212, 43) 0%, rgb(32, 209, 41) 55%, rgb(53, 232, 68) 100%);
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+  border: 2px solid rgb(24, 211, 49);
+}
+
+.btn-success:hover {
+  color: theme('colors.white-lilac.DEFAULT');
+  padding: 5px;
+  border-radius: 5px;
+  background: linear-gradient(-180deg, rgb(79, 228, 91) 0%, rgb(35, 192, 48) 55%, rgb(25, 211, 50) 100%);
+}
+
 
 * {
   box-sizing: border-box;

@@ -6,6 +6,8 @@ const Button = styled.button`
 
 export default function Footer() {
   return (
-    <Button>AAAA</Button>
+    <div>
+      Footer
+    </div>
   )
 }
