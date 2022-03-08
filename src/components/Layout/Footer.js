@@ -7,7 +7,7 @@ const Button = styled.button`
 export default function Footer() {
   return (
     <div>
-      Footer
+      Copyright <a href="https://www.devhub.in.th/">devhub.in.th</a>
     </div>
   )
 }

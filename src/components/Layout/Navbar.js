@@ -1,26 +1,28 @@
-import { Fragment } from 'react'
+import { Fragment, Component } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Tutorials', href: '#', current: false },
-  { name: 'Find Jobs', href: '#', current: false },
+  { name: 'หน้าแรก', href: '/', current: true },
+  { name: 'บทความ', href: '#', current: false },
+  { name: 'ค้นหางาน', href: '#', current: false },
+  { name: 'Public Project', href: '#', current: false },
   { name: 'Private Project', href: '#', current: false },
-  { name: 'Private Project', href: '#', current: false },
-  { name: 'Contact us', href: '#', current: false },
+  { name: 'ติดต่อเรา', href: '#', current: false },
 ]
 
-function classNames(...classes) {
+const classNames = (...classes) => {
   return classes.filter(Boolean).join(' ')
-}
+};
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bs-box bg-shadow">
+    <Disclosure as="nav" className="pr-3 pl-3">
       {({ open }) => (
         <>
-          <div className="max-w-8xl mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="max-w-full mx-auto">
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -33,45 +35,53 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex-1 flex items-center justify-center sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
+                  {/* <a
+                    key="0"
+                    href="#"
+                    className="btn-primary navbar-bg text-white px-3 py-2"
+                  >
+                    DEVHUB
+                  </a> */}
+
                   <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+                    className="object-cover block lg:hidden h-48 w-96"
+                    src={process.env.APP_URL + '/logo-devhub.webp'}
                     alt="Workflow"
                   />
                   <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
+                    className="object-cover hidden lg:block h-16 w-32"
+                    src={process.env.APP_URL + '/logo-devhub.webp'}
                     alt="Workflow"
                   />
                 </div>
-                <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
+                <div className="hidden sm:block sm:ml-6 md:block md:ml-6 lg:block lg:ml-6">
+                  <div className="navbar flex space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          item.current ? 'btn-primary navbar-bg text-white' : 'btn-primary text-black-300 hover:text-white',
+                          'px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
+                {/* <button
                   type="button"
                   className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </button> */}
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">

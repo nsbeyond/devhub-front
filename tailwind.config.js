@@ -6,8 +6,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'persian-blue': {
+          default: '#1D4DD6',
+          '50': '#B6C6F5',
+          '100': '#A4B8F3',
+          '200': '#809CEE',
+          '300': '#5C80E9',
+          '400': '#3864E4',
+          '500': '#1D4DD6',
+          '600': '#163BA5',
+          '700': '#102973',
+          '800': '#091842',
+          '900': '#020610'
+        },
         'white-lilac': {
-          DEFAULT: '#F8F9FD',
+          default: '#F8F9FD',
           '50': '#FFFFFF',
           '100': '#FFFFFF',
           '200': '#FFFFFF',
@@ -20,7 +33,7 @@ module.exports = {
           '900': '#4963CB'
         },
         'site-background': {
-          DEFAULT: '#DDE2F5',
+          default: '#DDE2F5',
           '50': '#FFFFFF',
           '100': '#FFFFFF',
           '200': '#FFFFFF',
@@ -33,7 +46,7 @@ module.exports = {
           '900': '#3752BB'
         },
         'medium-purple': {
-          DEFAULT: '#8860E9',
+          default: '#8860E9',
           '50': '#FFFFFF',
           '100': '#F3EFFD',
           '200': '#D8CCF8',

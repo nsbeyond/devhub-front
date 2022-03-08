@@ -1,60 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
-
 html,
 body {
-  background-color: theme('colors.site-background.DEFAULT');
-  padding: 15px;
   margin: 0;
-  font-family: 'Kanit', sans-serif !important;
+  background-color: theme('colors.white-lilac.500');
+  color: theme('colors.persian-blue.900');
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
   font-size: 18px;
+  font-smooth: always;
+  font-weight: bolder;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  color: inherit;
+  color: theme('colors.persian-blue.900');
   text-decoration: none;
+}
+a:hover {
+  color: theme('colors.persian-blue.default');
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+}
+
+input {
+  font-family: 'Kanit', sans-serif;
+  font-size: 18px;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-bg-default {
+  color: #fff;
+  background-color: theme('colors.persian-blue.default');
+}
+
+
+.navbar a {
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: theme('colors.persian-blue.default');
+  transition: all 0.3s ease-in;
+  text-decoration: none;
+}
+
+.navbar-bg, .navbar-bg:hover {
+  background-color: theme('colors.persian-blue.default');
+}
+
+.navbar-bg:hover {
+  background-color: theme('colors.persian-blue.default');
 }
 
 .bs-box {
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35); 
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .bg-shadow {
-  background-color: theme('colors.white-lilac.DEFAULT');
+  background-color: theme('colors.white-lilac.500');
   margin-bottom: 10px;
 }
 
 .btn-default {
-  min-width: 120px;
-  font-family: 'Kanit', sans-serif !important;
-  font-weight: 900;
-  color: theme('colors.white-lilac.DEFAULT');
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+  color: black;
   margin: 5px;
+  min-width: 120px;
   padding: 5px;
   border-radius: 5px;
-  background: rgb(166,141,230);
-  background: linear-gradient(-180deg, rgb(125, 79, 253) 30%, rgba(147,107,255,1) 55%, rgba(129,91,238,1) 100%);
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
-  border: 2px solid theme('colors.medium-purple.DEFAULT');
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 2px transparent;
+  box-shadow: 2px 1000px 1px #fff inset;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(100deg, #5314ff, #8240eb, #1109a5);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-repeat: no-repeat;
 }
 
 .btn-default:hover {
-  color: theme('colors.white-lilac.DEFAULT');
-  padding: 5px;
-  border-radius: 5px;
-  background: linear-gradient(-180deg, rgba(166,141,230,1) 0%, rgb(125, 79, 253) 35%, rgba(129,91,238,1) 50%);
+  box-shadow: none;
+  color: white;
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in;
 }
 
 .btn-success {
   min-width: 120px;
-  font-family: 'Kanit', sans-serif !important;
+  font-family: 'Kanit', sans-serif;
   font-weight: 900;
-  color: theme('colors.white-lilac.DEFAULT');
+  color: theme('colors.white-lilac.default');
   margin: 5px;
   padding: 5px;
   border-radius: 5px;
@@ -65,12 +118,27 @@ a {
 }
 
 .btn-success:hover {
-  color: theme('colors.white-lilac.DEFAULT');
+  color: theme('colors.white-lilac.default');
   padding: 5px;
   border-radius: 5px;
   background: linear-gradient(-180deg, rgb(79, 228, 91) 0%, rgb(35, 192, 48) 55%, rgb(25, 211, 50) 100%);
 }
 
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes rotatecw {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@keyframes rotateccw {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(-360deg);}
+}
 
 * {
   box-sizing: border-box;
