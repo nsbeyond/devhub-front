@@ -1,21 +1,12 @@
-import { React } from 'react';
+import { React } from 'react'
 import Link from 'next/link'
-import Button from '../components/Button';
-import { useRouter } from 'next/router'
-import { io } from "socket.io-client";
+import Button from '../components/Button'
+import _ from 'lodash'
 
 const Home = () => {
-  const router = useRouter()
-  const socket = io('http://localhost:5000');
-  
-  socket.on("connect", () => {
-    console.log(socket.id); // x8WIv7-mJelg7on_ALbx
-  });
-
-  
   return (
     <div>
-      <Link href={`/auth`}>
+      <Link href={`/auth`} passHref>
         <Button
           fontSize={18}
           fontWeight="bold"
@@ -54,4 +45,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default Home

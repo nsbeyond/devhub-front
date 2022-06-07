@@ -1,4 +1,8 @@
 module.exports = {
+  env: {
+    APP_URL: 'http://localhost:3000',
+    API_URL: 'http://localhost:5000/api/v1',
+  },
   i18n: {
     // These are all the locales you want to support in
     // your application
@@ -20,4 +24,13 @@ module.exports = {
     ],
   },
   reactStrictMode: true,
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    })
+
+    return config
+  },
 }

@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "airbnb",
+    "next/core-web-vitals"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "rules": {
+    "no-console": "off",
+    "no-unused-vars": "warn"
+  }
+}
