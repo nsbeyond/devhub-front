@@ -3,6 +3,9 @@ module.exports = {
     APP_URL: 'http://localhost:3000',
     API_URL: 'http://localhost:5000/api/v1',
   },
+  images: {
+    domains: ['ap-smart-world-data.s3.amazonaws.com', 'ap-smart-world-data-new-uat.s3.amazonaws.com', 'ap-smart-world-data.s3.amazonaws.com', 's3-dev.apdigital.ai'],
+  },
   i18n: {
     // These are all the locales you want to support in
     // your application

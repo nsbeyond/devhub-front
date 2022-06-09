@@ -17,7 +17,7 @@ const App = ({ Component, pageProps, router }) => {
           title="DevHub - Developer Community"
           description="DevHub - Developer Community in Thailand"
         />
-        <Navbar />
+        {/* <Navbar /> */}
         <MainContent>
           <AnimatePresence>
             <motion.div
@@ -42,7 +42,7 @@ const App = ({ Component, pageProps, router }) => {
             </motion.div>
           </AnimatePresence>
         </MainContent>
-        <Footer />
+        {/* <Footer /> */}
       </PersistGate>
     </Provider>
   )

@@ -19,6 +19,33 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.market-pic {
+  margin: 5px;
+}
+
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 35px;
+}
+h3 {
+  font-size: 27px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 15px;
+}
+
+.card {
+  background-color: theme('colors.white');
+  border-radius: theme('borderRadius.lg');
+  padding: theme('spacing.6');
+  box-shadow: theme('boxShadow.xl');
+}
+
 a {
   color: theme('colors.persian-blue.900');
   text-decoration: none;
